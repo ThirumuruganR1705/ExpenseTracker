@@ -73,7 +73,7 @@ function TransactionList() {
                 <h2 className='list-title'>History</h2>
                 {demo.map((arr)=>(
                     <div key={Math.random()} className="list">
-                        <div  className='btn-remove'><Tooltip title="Delete" arrow><button className='remover' id={arr.key} value={arr.amount} onClick={remover}>X</button></Tooltip></div>
+                        <div  className='btn-remove'><Tooltip title="Delete" arrow><button className='remover h-6' id={arr.key} value={arr.amount} onClick={remover}>X</button></Tooltip></div>
                         <Tooltip title={arr.desc} placement="top" arrow><li className='list-item'>{arr.desc}</li></Tooltip>
                         <li className='list-item' id={arr.amount>0?"cash":"cash1"}>{arr.amount}</li>
                     </div>
