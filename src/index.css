@@ -1,0 +1,595 @@
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+.main{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    /* display: flex;
+    /* align-items: center; 
+    justify-content: center; */
+    background-color: rgb(247, 247, 247);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    /* margin-top: 70px; */
+    /* margin-bottom: 30px; */
+    /* margin: 15px 5px; */
+    margin-left: 45px;
+    color: rgb(101, 103, 104);
+    /* text-align: center; */
+}
+
+.addTransaction{
+    width: 100%;
+}
+
+.add-head{
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.add{
+    /* margin: 0px 30px 0px 0px; */
+    margin: 15px 20%;
+    width: 60%;
+    padding: 30px 20px;
+    /* padding: 10px; */
+    font-size: 25px;
+    /* background-color: rgb(230, 243, 243); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.add-content{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc, .amount{
+    margin: 0px 0px 10px 0px;
+}
+
+input{
+    border: none;
+    height: 25px;
+    width: 100%;
+    background: rgb(247, 247, 247);
+    border-bottom: 1px solid black;
+}
+
+input:focus{
+    outline: none;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+    border: none;
+    width: 100%;
+    padding: 7px;
+    background-color: rgb(102, 236, 75);
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.note{
+    font-size: 10px;
+    color: red;
+}
+
+.maintransaction{
+    width: 100%;
+}
+
+.transactionList{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 15px 20%;
+    /* padding-bottom: 1px; */
+    /* height: 250px; */
+    /* background-color: rgb(230, 243, 243) ; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.list-title{
+    color: rgb(101, 103, 104);
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 5px;
+    /* background-color: rgb(75, 215, 143); */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+/* .list1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+    background-color: rgb(236, 174, 104) ;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+} */
+
+.list li,.list1 li{
+    list-style: none;
+    padding: 5px 0px;
+    
+}
+
+.btn-remover{
+    /* height: 190px; */
+    display: flex;
+    align-items: center;
+}
+
+.remover{
+    border: none;
+    background-color: rgb(220, 31, 31);
+    color: aliceblue;
+    padding: 0px 3px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#cash1{
+    border-right: 4px solid red;
+    padding-right: 4px;
+}
+
+#cash{
+    border-right: 4px solid green;
+    padding-right: 4px;
+}
+
+/* Navbar */
+
+.navbar{
+    height: 70px;
+    width: 100%;
+    margin:0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.navbar ul {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding: 5px;
+    cursor:pointer;
+    color: rgb(149, 158, 158);
+    transition: .5s;
+}
+
+.navbar ul li:hover{
+    color: rgb(6, 6, 6);
+    transform: scale(1.1);
+}
+
+.navbar button{
+    border: none;
+    background-color: black;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.navbar button:hover{
+    transform: scale(0.8);
+}
+
+.menu{
+    display: none;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* Home Page  */
+
+.home{
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20%;
+}
+
+.tot-balance{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 150px;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    background-color: rgb(5, 50, 35);
+}
+
+.tot-balance h3{
+    font-size: 40px;
+    height: 150px;
+    align-items: flex-end;
+    display: flex;
+    margin-left: 10px;
+    color: aliceblue;
+}
+
+.tot-balance h5{
+    font-size: 90px;
+    font-weight: normal;
+    margin-right: 10px;
+    color: aliceblue;
+}
+
+.rupee{
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.IncomeExpense{
+    display: flex;
+    /* grid-template-columns: 50% 50%; */
+    justify-content: space-between;
+    /* background-color: rgb(230, 243, 243); */
+    padding: 10px;
+    margin-top: 15px;
+    height: 100px;
+    width: 100%;
+    
+}
+
+.Income{
+    font-size: 20px;
+    background-color: rgb(24, 153, 24);
+    width: 49%;
+    color: aliceblue;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Expense{
+    font-size: 20px;
+    background-color: rgb(243, 39, 39);
+    color: aliceblue;
+    width: 49%;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Expense h3, .Income h3{
+    padding-left: 10px;
+}
+
+.Expense span, .Income span{
+    padding-right: 10px;
+}
+
+.countEx{
+    /* width: 460px; */
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 50px;
+}
+
+.login{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
+
+img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.sub-login
+{
+    z-index: 1;
+    margin-left: 45%;
+    width: 300px;
+    height: 300px;
+    /* background-color: aqua; */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.login-head{
+    margin: 10px;
+    font-size: 27px;
+    text-align: center;
+    color: red;
+}
+
+#label{
+    margin: 15px 0px;
+}
+
+#input-login{
+    margin: 10px 0;
+    background: transparent;
+}
+
+.login-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submit-btn{
+    padding: 4px;
+    border: none;
+    background-color: green;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.reg{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.reg a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.reg a:hover{
+    color: red;
+}
+
+/* Registration */
+
+.register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.reg-btn button{
+    border: none;
+    background-color: green;
+    color: aliceblue;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.reg-body{
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.reg-head{
+    text-align: center;
+    /* padding: 10px 0; */
+}
+
+.register form div{
+    padding: 5px 0;
+}
+
+.register input
+{
+    background: transparent;
+}
+
+.al-acc{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.al-acc a{
+    margin: 0 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.al-acc a:hover{
+    color: red;
+}
+
+.menu-toggle,.menu-close{
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+
+    .main{
+        height: 90vh;
+    }
+
+    img{
+        display: none;
+    }
+
+    .sub-login{
+        margin-left: 0;
+    }
+    
+    .home{
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .title{
+        margin: 0;
+        /* margin-top: 30px; */
+        font-size: 30px;
+    }
+
+    .Income,.Expense{
+        font-size: 15px;
+    }
+    .add{
+        width: 280px;
+        font-size: 20px;
+    }
+
+    .IncomeExpense{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .Income{
+        width: 100%;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .Expense{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+    .menu-item{
+        margin: 5px 0;
+    }
+
+    #men{
+        display: none;
+    }
+
+    .navbar ul{
+        justify-content: center;
+        width: 100%;
+        /* padding-right: 30px; */
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        position: absolute;
+        top: 30px;
+        background-color: rgb(237, 237, 237);
+    }
+
+
+    .navbar ul li:hover{
+        color: rgb(6, 6, 6);
+        transform: scale(0.9);
+    }
+
+    .menu{
+        margin-right: 10px;
+    }
+
+
+    #open-btn{
+        display: block;
+        cursor: pointer;
+    }
+
+    #close-btn{
+        display: none;
+        cursor: pointer;
+    }
+
+    #close{
+        display:block;
+    }
+
+    .transactionList{
+        width: 90%;
+        margin: 10px 5%;
+    }
+
+}
+
+.img{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.image{
+    height: 130px;
+    width: 150px;
+}
+
+@media screen  and (max-width:520px){
+    .home{
+        width: 96%;
+        margin: 0 2%;
+    }
+
+    .tot-balance h3{
+        font-size: 30px;
+    }
+
+    .tot-balance h5{
+        font-size: 65px;
+    }
+
+}
+
